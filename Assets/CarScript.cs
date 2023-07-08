@@ -27,10 +27,12 @@ public class UICar : MonoBehaviour
     public GameObject slider;
     private bool showSlider = false;
     private Button myButton;
+    public LogicScript logic;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
         myButton = gameObject.GetComponent<Button>();
         Debug.Log(myRigidBody);
@@ -39,8 +41,7 @@ public class UICar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         
     }
 
@@ -50,6 +51,9 @@ public class UICar : MonoBehaviour
 
         myRigidBody.drag = dragMultipler;
         myRigidBody.angularDrag = dragMultipler;
+
+        int scoreIncrement =  (int)(1000*(myRigidBody.velocity.x + myRigidBody.velocity.y));
+        logic.addScore(scoreIncrement);
     }
 
     public void OnStart() {
