@@ -23,6 +23,7 @@ public class UICar : MonoBehaviour
     public Text speedDisplay;
 
     private int speed;
+    private bool isCollided = false;
 
     public GameObject slider;
     private bool showSlider = false;
@@ -42,6 +43,11 @@ public class UICar : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+
+        if (isCollided) {
+            int scoreIncrement = (int)(myRigidBody.velocity.sqrMagnitude / 100000);
+            logic.addScore(scoreIncrement);
+        }
         
     }
 
@@ -52,8 +58,7 @@ public class UICar : MonoBehaviour
         myRigidBody.drag = dragMultipler;
         myRigidBody.angularDrag = dragMultipler;
 
-        int scoreIncrement =  (int)(1000*(myRigidBody.velocity.x + myRigidBody.velocity.y));
-        logic.addScore(scoreIncrement);
+        isCollided = true;
     }
 
     public void OnStart() {
