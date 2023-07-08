@@ -48,7 +48,10 @@ public class UICar : MonoBehaviour
             float velocityIncrement = myRigidBody.velocity.sqrMagnitude;
             float angleIncrement = myRigidBody.angularVelocity;
             int scoreIncrement = (int)((velocityIncrement + angleIncrement) / 10000);
-            logic.addScore(scoreIncrement);
+            if (scoreIncrement > 0)
+            {
+                logic.addScore(scoreIncrement);
+            }
         }
         
     }
