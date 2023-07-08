@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class UICar : MonoBehaviour
 {
-
     private Rigidbody2D myRigidBody;
+
+    private Image myImage;
+    private float collisionScale = 0.1f;
+
+    private AudioSource myAudioSource;
 
     public Vector2 initialDirection;
 
@@ -34,6 +38,8 @@ public class UICar : MonoBehaviour
     void Start() {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
 
+        myAudioSource = gameObject.GetComponent<AudioSource>();
+        myImage = gameObject.GetComponentInChildren<Image>();
         myRigidBody = gameObject.GetComponent<Rigidbody2D>();
         myButton = gameObject.GetComponent<Button>();
         Debug.Log(myRigidBody);
@@ -64,6 +70,17 @@ public class UICar : MonoBehaviour
         myRigidBody.angularDrag = dragMultipler;
 
         isCollided = true;
+
+        Vector3 squishVector = myRigidBody.velocity.normalized * collisionScale;
+
+        gameObject.transform.localScale = new Vector3(
+            gameObject.transform.localScale.x - squishVector.x,
+            gameObject.transform.localScale.y - squishVector.y,
+            gameObject.transform.localScale.z - squishVector.z
+        );
+
+        myImage.color = Color.black;
+        myAudioSource.Play();
     }
 
     public void OnStart() {

@@ -10,7 +10,7 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public Text scoreText;
     public int scoreToAdvance;
-    public string nextLevel;
+    public GameObject nextLevelButton;
 
     private bool isStarted = false;
     private List<UICar> cars;
@@ -47,7 +47,7 @@ public class LogicScript : MonoBehaviour
 
         if (playerScore > scoreToAdvance) {
             Debug.Log("got enough points!");
-            SceneManager.LoadScene(nextLevel);
+            nextLevelButton.SetActive(true);
         }
     }
 
