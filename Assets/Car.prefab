@@ -148,6 +148,7 @@ MonoBehaviour:
   initialSpeed: 5
   initialDirection: {x: 1, y: 0}
   multiplier: 6
+  logic: {fileID: 0}
 --- !u!50 &8683959350137923997
 Rigidbody2D:
   serializedVersion: 4
