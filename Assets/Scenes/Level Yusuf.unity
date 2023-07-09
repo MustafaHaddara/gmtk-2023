@@ -8058,7 +8058,7 @@ MonoBehaviour:
   playerScore: 0
   scoreText: {fileID: 654962705}
   targetText: {fileID: 909776610}
-  scoreToAdvance: 1000
+  scoreToAdvance: 500000
   nextLevelButton: {fileID: 1386671963}
 --- !u!4 &1591238002
 Transform:
