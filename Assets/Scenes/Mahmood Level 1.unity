@@ -8636,7 +8636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScore: 0
   scoreText: {fileID: 654962705}
-  scoreToAdvance: 150000
+  scoreToAdvance: 700000
   nextLevelButton: {fileID: 0}
 --- !u!4 &1591238002
 Transform:
