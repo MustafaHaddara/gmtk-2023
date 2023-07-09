@@ -50,12 +50,12 @@ public class UICar : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update() {
+    void FixedUpdate() {
 
         if (isCollided) {
             float velocityIncrement = myRigidBody.velocity.sqrMagnitude;
             float angleIncrement = myRigidBody.angularVelocity;
-            int scoreIncrement = (int)((velocityIncrement + angleIncrement) / 10000);
+            int scoreIncrement = (int)((velocityIncrement + angleIncrement) / 100);
             if (scoreIncrement > 0)
             {
                 logic.addScore(scoreIncrement);
