@@ -40,8 +40,8 @@ public class UICar : MonoBehaviour
 
         myAudioSource = gameObject.GetComponent<AudioSource>();
         myImage = gameObject.GetComponentInChildren<Image>();
-        myRigidBody = gameObject.GetComponent<Rigidbody2D>();
-        myButton = gameObject.GetComponent<Button>();
+        myRigidBody = gameObject.GetComponentInChildren<Rigidbody2D>();
+        myButton = gameObject.GetComponentInChildren<Button>();
         Debug.Log(myRigidBody);
 
         SetSpeed(0);
