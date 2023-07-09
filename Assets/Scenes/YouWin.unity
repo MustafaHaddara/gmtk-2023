@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 303497833}
   - component: {fileID: 303497832}
   m_Layer: 5
-  m_Name: Start Button
+  m_Name: Play Again Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -146}
-  m_SizeDelta: {x: 500, y: 200}
+  m_SizeDelta: {x: 800, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &303497832
 MonoBehaviour:
@@ -488,7 +488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start
+  m_Text: Play Again
 --- !u!222 &984392445
 CanvasRenderer:
   m_ObjectHideFlags: 0
