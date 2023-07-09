@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UICar : MonoBehaviour
 {
+    private ParticleSpawner myParticleSpawner;
+
     private Rigidbody2D myRigidBody;
 
     private Image myImage;
@@ -32,12 +34,13 @@ public class UICar : MonoBehaviour
     public GameObject slider;
     private bool showSlider = false;
     private Button myButton;
-    public LogicScript logic;
+    private LogicScript logic;
 
     // Start is called before the first frame update
     void Start() {
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
 
+        myParticleSpawner = gameObject.GetComponent<ParticleSpawner>();
         myAudioSource = gameObject.GetComponent<AudioSource>();
         myImage = gameObject.GetComponentInChildren<Image>();
         myRigidBody = gameObject.GetComponentInChildren<Rigidbody2D>();
@@ -81,6 +84,8 @@ public class UICar : MonoBehaviour
 
         myImage.color = Color.black;
         myAudioSource.Play();
+
+        myParticleSpawner.SpawnParticles();
     }
 
     public void OnStart() {
