@@ -21,8 +21,6 @@ public class LogicScript : MonoBehaviour
         cars = GameObject.FindGameObjectsWithTag("Car")
             .ToList()
             .ConvertAll<UICar>(gameObject => gameObject.GetComponent<UICar>());
-
-        Debug.Log(cars.Count);
     }
 
     // Update is called once per frame
@@ -46,7 +44,6 @@ public class LogicScript : MonoBehaviour
         scoreText.text = playerScore.ToString();
 
         if (playerScore > scoreToAdvance) {
-            Debug.Log("got enough points!");
             nextLevelButton.SetActive(true);
         }
     }

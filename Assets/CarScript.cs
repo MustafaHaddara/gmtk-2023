@@ -45,7 +45,6 @@ public class UICar : MonoBehaviour
         myImage = gameObject.GetComponentInChildren<Image>();
         myRigidBody = gameObject.GetComponentInChildren<Rigidbody2D>();
         myButton = gameObject.GetComponentInChildren<Button>();
-        Debug.Log(myRigidBody);
 
         SetSpeed(0);
     }
