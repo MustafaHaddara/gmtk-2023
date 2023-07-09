@@ -29,7 +29,7 @@ public class UICar : MonoBehaviour
     public Text speedDisplay;
 
     private int speed;
-    private bool isCollided = false;
+    public bool isCollided = false;
 
     public GameObject slider;
     private bool showSlider = false;
@@ -65,6 +65,8 @@ public class UICar : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
+        if (collision.gameObject.tag != "Car") return;
+
         myRigidBody.velocity = myRigidBody.velocity * multiplier;
         myRigidBody.angularVelocity *= multiplier * 2;
 
