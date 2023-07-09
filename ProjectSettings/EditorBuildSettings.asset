@@ -25,6 +25,9 @@ EditorBuildSettings:
     guid: c5fffa161991640668dbdc15820123bb
   - enabled: 1
     path: Assets/Scenes/Mahmood Level 2.unity
+    guid: 2f8e399450930402c85f3e8c36413896
+  - enabled: 1
+    path: Assets/Scenes/Mahmood Level 3.unity
     guid: f25b9d81cc96941b8a0cc854e35a2da8
   - enabled: 1
     path: Assets/Scenes/YouWin.unity
