@@ -162,7 +162,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 403, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &119868172
@@ -1084,6 +1084,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 446157623}
     m_Modifications:
+    - target: {fileID: 1823474619829763451, guid: f29e9305099cc4853ac460a5eebd508f, type: 3}
+      propertyPath: nextLevelName
+      value: Level1-2
+      objectReference: {fileID: 0}
     - target: {fileID: 3173232371065838918, guid: f29e9305099cc4853ac460a5eebd508f, type: 3}
       propertyPath: m_Name
       value: Next Level
@@ -1683,7 +1687,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScore: 0
   scoreText: {fileID: 654962705}
-  scoreToAdvance: 1000
+  scoreToAdvance: 30000
   nextLevelButton: {fileID: 809032956}
 --- !u!4 &1591238002
 Transform:
@@ -2033,7 +2037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4974414563627714214, guid: 3d790b24061fe47969603b6abd6b751d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -233
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 4974414563627714214, guid: 3d790b24061fe47969603b6abd6b751d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2214,7 +2218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4974414563627714214, guid: 3d790b24061fe47969603b6abd6b751d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -673
+      value: -270
       objectReference: {fileID: 0}
     - target: {fileID: 4974414563627714214, guid: 3d790b24061fe47969603b6abd6b751d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2350,7 +2354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 229, y: -181}
+  m_AnchoredPosition: {x: -236, y: -181}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2074695812
