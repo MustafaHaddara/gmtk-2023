@@ -9,6 +9,7 @@ public class LogicScript : MonoBehaviour
 {
     public int playerScore;
     public Text scoreText;
+    public Text targetText;
     public int scoreToAdvance;
     public GameObject nextLevelButton;
 
@@ -21,6 +22,8 @@ public class LogicScript : MonoBehaviour
         cars = GameObject.FindGameObjectsWithTag("Car")
             .ToList()
             .ConvertAll<UICar>(gameObject => gameObject.GetComponent<UICar>());
+
+        targetText.text = $"target: {scoreToAdvance}";
     }
 
     // Update is called once per frame
